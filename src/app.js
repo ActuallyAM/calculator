@@ -30,11 +30,9 @@ calculateBtn.addEventListener('click', function (e) {
   } else if (tubercolosis.checked === true && sickDaysInt >= 240) {
     sickDays.value = 240;
   }
-
   const avgIncome = parseInt(income.value);
   const daysSick = parseInt(sickDays.value);
   totalSickDays.innerHTML = daysSick;
-
   for (let i = 0; i < dailyAllowance.length; i++) {
     const allowance = ((avgIncome / 30) * daysSick * 0.7) / daysSick;
     dailyAllowance[i].innerHTML = allowance.toFixed(2) + ' €';
@@ -42,7 +40,6 @@ calculateBtn.addEventListener('click', function (e) {
   const allowance = ((avgIncome / 30) * daysSick * 0.7) / daysSick;
   dailyAllowance.innerHTML = allowance.toFixed(2);
   const dailyAllowanceInt = parseFloat(dailyAllowance.innerHTML);
-
   if (daysSick <= 8) {
     empDaysTotal.innerHTML = daysSick - 3 + ' days';
     empCompMoney.innerHTML = (
@@ -53,10 +50,8 @@ calculateBtn.addEventListener('click', function (e) {
   } else if (daysSick >= 9) {
     empDaysTotal.innerHTML = 5 + ' days';
     empCompMoney.innerHTML = (5 * dailyAllowanceInt).toFixed(2);
-
     incDaysTotal.innerHTML =
       daysSick - parseInt(empDaysTotal.innerHTML) - 3 + ' days';
-
     incCompMoney.innerHTML = (
       parseInt(incDaysTotal.innerHTML) * dailyAllowanceInt
     ).toFixed(2);
@@ -65,7 +60,6 @@ calculateBtn.addEventListener('click', function (e) {
     parseFloat(empCompMoney.innerHTML) + parseFloat(incCompMoney.innerHTML);
   totalMoney.innerHTML = totalMoneyEnd.toFixed(2);
 });
-
 $(document).ready(function () {
   $('input[type="number"]').on('keyup', function () {
     v = parseInt($(this).val());

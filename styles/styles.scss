@@ -84,7 +84,7 @@ section {
   margin-bottom: 10px;
 }
 .comp-money {
-  font-weight: 700;
+  font-weight: bold;
   font-size: 18px;
 
   text-align: center;
@@ -110,7 +110,6 @@ section {
   align-items: center;
   text-align: center;
   font-size: 14px;
-  font-weight: 400;
   color: $MetalDark;
   p {
     margin-bottom: 5px;
@@ -126,10 +125,6 @@ form {
 .form-check {
   padding-left: 0;
   margin-bottom: 20px;
-}
-.label-text {
-  font-size: 14px;
-  font-weight: 400;
 }
 .input-box {
   background: $White;
@@ -149,7 +144,7 @@ i.fas.fa-euro-sign {
   border: 0;
   margin-top: 38px;
   margin-left: 92%;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 18px;
 }
 .days {
@@ -161,7 +156,7 @@ i.fas.fa-euro-sign {
   margin-top: 37px;
   margin-left: 81%;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: bold;
 }
 label {
   font-size: 14px;
