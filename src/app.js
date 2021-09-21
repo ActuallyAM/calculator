@@ -61,10 +61,17 @@ calculateBtn.addEventListener('click', function (e) {
       parseInt(incDaysTotal.innerHTML) * dailyAllowanceInt
     ).toFixed(2);
   }
+  if (empDaysTotal.innerHTML === '1 days') {
+    empDaysTotal.innerHTML = '1 day';
+  }
+  if (incDaysTotal.innerHTML === '1 days') {
+    incDaysTotal.innerHTML = '1 day';
+  }
   totalMoneyEnd =
     parseFloat(empCompMoney.innerHTML) + parseFloat(incCompMoney.innerHTML);
   totalMoney.innerHTML = totalMoneyEnd.toFixed(2);
 });
+
 $(document).ready(function () {
   $('input[type="number"]').on('keyup', function () {
     v = parseInt($(this).val());
