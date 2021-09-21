@@ -9,7 +9,6 @@ const empCompMoney = document.querySelector('.total-comp-emp');
 const incCompMoney = document.querySelector('.total-comp-inc');
 const empDaysTotal = document.querySelector('.comp-days-emp-total');
 const incDaysTotal = document.querySelector('.comp-days-inc-total');
-const calculatedInfo = document.querySelector('.calculated-info');
 
 calculateBtn.addEventListener('click', function (e) {
   e.preventDefault();
@@ -29,6 +28,12 @@ calculateBtn.addEventListener('click', function (e) {
     sickDays.value = 182;
   } else if (tubercolosis.checked === true && sickDaysInt >= 240) {
     sickDays.value = 240;
+  }
+  if (sickDays.value === '') {
+    sickDays.value = 16;
+  }
+  if (income.value === '') {
+    income.value = 1500;
   }
   const avgIncome = parseInt(income.value);
   const daysSick = parseInt(sickDays.value);
